@@ -9,14 +9,15 @@ public class List extends ListStr{
     }
 
     public String first(){
-        count = 1;
+        count = 0;
         return this.list[0];
     }
 
     public String next(){
-        if(count != 5){
+        count++;
+        
+        if(count < this.list.length){
             String element = this.list[count];
-            count++;
             return element;
         }
         else{
